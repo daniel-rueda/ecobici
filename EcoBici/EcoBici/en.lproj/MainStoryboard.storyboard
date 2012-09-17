@@ -26,7 +26,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="1N0-20-AhA" kind="push" id="phn-2X-mE3"/>
+                                    <segue destination="1N0-20-AhA" kind="push" identifier="showDetailSegue" id="phn-2X-mE3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -45,10 +45,37 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <mapView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="D0h-Ng-cv3">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="WJi-qc-t5x">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        </mapView>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7ec-zt-KPe"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPy-NB-oaX">
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" title="Button">
+                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <segue destination="wej-1Q-V7L" kind="push" identifier="showMapStation" id="hyj-WZ-TR7"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="TPy-NB-oaX" firstAttribute="leading" secondItem="WJi-qc-t5x" secondAttribute="leading" type="default" id="6z3-d4-nUx"/>
+                                <constraint firstItem="7ec-zt-KPe" firstAttribute="bottom" secondItem="WJi-qc-t5x" secondAttribute="bottom" type="default" id="CQs-HG-1XA"/>
+                                <constraint firstItem="7ec-zt-KPe" firstAttribute="trailing" secondItem="WJi-qc-t5x" secondAttribute="trailing" type="default" id="Qi4-Yd-oNX"/>
+                                <constraint firstItem="7ec-zt-KPe" firstAttribute="leading" secondItem="WJi-qc-t5x" secondAttribute="leading" type="default" id="RbC-KK-1Ka"/>
+                                <constraint firstItem="TPy-NB-oaX" firstAttribute="trailing" secondItem="WJi-qc-t5x" secondAttribute="trailing" type="default" id="a71-PP-c36"/>
+                                <constraint firstItem="7ec-zt-KPe" firstAttribute="top" secondItem="WJi-qc-t5x" secondAttribute="top" type="default" id="dQv-pH-cFm"/>
+                                <constraint firstItem="TPy-NB-oaX" firstAttribute="top" secondItem="WJi-qc-t5x" secondAttribute="top" type="default" id="uZD-tq-W7d"/>
+                                <constraint firstItem="TPy-NB-oaX" firstAttribute="bottom" secondItem="WJi-qc-t5x" secondAttribute="bottom" type="default" id="udo-GN-6rv"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="stationCell" id="Y76-wL-jAU">
                                 <rect key="frame" x="0.0" y="222" width="320" height="44"/>
@@ -71,6 +98,30 @@
             </objects>
             <point key="canvasLocation" x="1704" y="-204"/>
         </scene>
+        <!--View Controller - Mapa-->
+        <scene sceneID="PhN-Fv-cg9">
+            <objects>
+                <viewController id="wej-1Q-V7L" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Pj-9V-ryh">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yaS-qt-KgS"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yaS-qt-KgS" firstAttribute="bottom" secondItem="7Pj-9V-ryh" secondAttribute="bottom" type="default" id="ONw-Un-Z8p"/>
+                            <constraint firstItem="yaS-qt-KgS" firstAttribute="top" secondItem="7Pj-9V-ryh" secondAttribute="top" type="default" id="OgP-Xy-aFg"/>
+                            <constraint firstItem="yaS-qt-KgS" firstAttribute="leading" secondItem="7Pj-9V-ryh" secondAttribute="leading" type="default" id="kKo-Eb-Eqy"/>
+                            <constraint firstItem="yaS-qt-KgS" firstAttribute="trailing" secondItem="7Pj-9V-ryh" secondAttribute="trailing" type="default" id="uaf-Ke-nJg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mapa" id="xlj-ip-HhN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eGj-eF-YZV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2201" y="-204"/>
+        </scene>
         <!--Navigation Controller - Estaciones-->
         <scene sceneID="GYZ-fr-vHk">
             <objects>
@@ -88,6 +139,11 @@
             <point key="canvasLocation" x="653" y="-204"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

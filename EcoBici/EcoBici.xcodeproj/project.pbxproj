@@ -17,10 +17,6 @@
 		AFE05B5A160784B700553B26 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE05B59160784B700553B26 /* Default@2x.png */; };
 		AFE05B5C160784B700553B26 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE05B5B160784B700553B26 /* Default-568h@2x.png */; };
 		AFE05B5F160784B700553B26 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE05B5D160784B700553B26 /* MainStoryboard.storyboard */; };
-		AFE05B64160784B700553B26 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE05B63160784B700553B26 /* first.png */; };
-		AFE05B66160784B700553B26 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE05B65160784B700553B26 /* first@2x.png */; };
-		AFE05B6B160784B700553B26 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE05B6A160784B700553B26 /* second.png */; };
-		AFE05B6D160784B700553B26 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE05B6C160784B700553B26 /* second@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,10 +34,6 @@
 		AFE05B59160784B700553B26 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AFE05B5B160784B700553B26 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AFE05B5E160784B700553B26 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		AFE05B63160784B700553B26 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		AFE05B65160784B700553B26 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		AFE05B6A160784B700553B26 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		AFE05B6C160784B700553B26 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,10 +83,6 @@
 				AFE05B54160784B700553B26 /* DRAppDelegate.h */,
 				AFE05B55160784B700553B26 /* DRAppDelegate.m */,
 				AFE05B5D160784B700553B26 /* MainStoryboard.storyboard */,
-				AFE05B63160784B700553B26 /* first.png */,
-				AFE05B65160784B700553B26 /* first@2x.png */,
-				AFE05B6A160784B700553B26 /* second.png */,
-				AFE05B6C160784B700553B26 /* second@2x.png */,
 				AFE05B4C160784B700553B26 /* Supporting Files */,
 			);
 			path = EcoBici;
@@ -171,10 +159,6 @@
 				AFE05B5A160784B700553B26 /* Default@2x.png in Resources */,
 				AFE05B5C160784B700553B26 /* Default-568h@2x.png in Resources */,
 				AFE05B5F160784B700553B26 /* MainStoryboard.storyboard in Resources */,
-				AFE05B64160784B700553B26 /* first.png in Resources */,
-				AFE05B66160784B700553B26 /* first@2x.png in Resources */,
-				AFE05B6B160784B700553B26 /* second.png in Resources */,
-				AFE05B6D160784B700553B26 /* second@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
