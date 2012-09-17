@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF54DF731607C67400536F1C /* DRHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AF54DF721607C67400536F1C /* DRHelper.m */; };
+		AF54DF761607C6AE00536F1C /* DRStation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF54DF751607C6AE00536F1C /* DRStation.m */; };
 		AFE05B46160784B700553B26 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE05B45160784B700553B26 /* UIKit.framework */; };
 		AFE05B48160784B700553B26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE05B47160784B700553B26 /* Foundation.framework */; };
 		AFE05B4A160784B700553B26 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE05B49160784B700553B26 /* CoreGraphics.framework */; };
@@ -17,9 +19,14 @@
 		AFE05B5A160784B700553B26 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE05B59160784B700553B26 /* Default@2x.png */; };
 		AFE05B5C160784B700553B26 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE05B5B160784B700553B26 /* Default-568h@2x.png */; };
 		AFE05B5F160784B700553B26 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE05B5D160784B700553B26 /* MainStoryboard.storyboard */; };
+		AFE05B7916079E4A00553B26 /* DRStationStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE05B7816079E4A00553B26 /* DRStationStorage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF54DF711607C67400536F1C /* DRHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHelper.h; sourceTree = "<group>"; };
+		AF54DF721607C67400536F1C /* DRHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHelper.m; sourceTree = "<group>"; };
+		AF54DF741607C6AE00536F1C /* DRStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRStation.h; sourceTree = "<group>"; };
+		AF54DF751607C6AE00536F1C /* DRStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRStation.m; sourceTree = "<group>"; };
 		AFE05B41160784B700553B26 /* EcoBici.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoBici.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE05B45160784B700553B26 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AFE05B47160784B700553B26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -34,6 +41,8 @@
 		AFE05B59160784B700553B26 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AFE05B5B160784B700553B26 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AFE05B5E160784B700553B26 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		AFE05B7716079E4A00553B26 /* DRStationStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRStationStorage.h; sourceTree = "<group>"; };
+		AFE05B7816079E4A00553B26 /* DRStationStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRStationStorage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +89,7 @@
 		AFE05B4B160784B700553B26 /* EcoBici */ = {
 			isa = PBXGroup;
 			children = (
+				AFE05B7316079A4F00553B26 /* Classes */,
 				AFE05B54160784B700553B26 /* DRAppDelegate.h */,
 				AFE05B55160784B700553B26 /* DRAppDelegate.m */,
 				AFE05B5D160784B700553B26 /* MainStoryboard.storyboard */,
@@ -100,6 +110,43 @@
 				AFE05B5B160784B700553B26 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AFE05B7316079A4F00553B26 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AFE05B7416079A4F00553B26 /* Data model */,
+				AFE05B7516079A4F00553B26 /* Helpers */,
+				AFE05B7616079A4F00553B26 /* View controllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AFE05B7416079A4F00553B26 /* Data model */ = {
+			isa = PBXGroup;
+			children = (
+				AFE05B7716079E4A00553B26 /* DRStationStorage.h */,
+				AFE05B7816079E4A00553B26 /* DRStationStorage.m */,
+				AF54DF741607C6AE00536F1C /* DRStation.h */,
+				AF54DF751607C6AE00536F1C /* DRStation.m */,
+			);
+			path = "Data model";
+			sourceTree = "<group>";
+		};
+		AFE05B7516079A4F00553B26 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AF54DF711607C67400536F1C /* DRHelper.h */,
+				AF54DF721607C67400536F1C /* DRHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AFE05B7616079A4F00553B26 /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +218,9 @@
 			files = (
 				AFE05B52160784B700553B26 /* main.m in Sources */,
 				AFE05B56160784B700553B26 /* DRAppDelegate.m in Sources */,
+				AFE05B7916079E4A00553B26 /* DRStationStorage.m in Sources */,
+				AF54DF731607C67400536F1C /* DRHelper.m in Sources */,
+				AF54DF761607C6AE00536F1C /* DRStation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +338,7 @@
 				AFE05B72160784B700553B26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
