@@ -29,6 +29,7 @@
 		AFE05B5C160784B700553B26 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE05B5B160784B700553B26 /* Default-568h@2x.png */; };
 		AFE05B5F160784B700553B26 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE05B5D160784B700553B26 /* MainStoryboard.storyboard */; };
 		AFE05B7916079E4A00553B26 /* DRStationStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE05B7816079E4A00553B26 /* DRStationStorage.m */; };
+		AFF3DBAB1607EA7E00282B95 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF3DBAA1607EA7E00282B95 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		AFE05B5E160784B700553B26 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		AFE05B7716079E4A00553B26 /* DRStationStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRStationStorage.h; sourceTree = "<group>"; };
 		AFE05B7816079E4A00553B26 /* DRStationStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRStationStorage.m; sourceTree = "<group>"; };
+		AFF3DBAA1607EA7E00282B95 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF3DBAB1607EA7E00282B95 /* MapKit.framework in Frameworks */,
 				AFE05B46160784B700553B26 /* UIKit.framework in Frameworks */,
 				AFE05B48160784B700553B26 /* Foundation.framework in Frameworks */,
 				AFE05B4A160784B700553B26 /* CoreGraphics.framework in Frameworks */,
@@ -135,6 +138,7 @@
 		AFE05B44160784B700553B26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFF3DBAA1607EA7E00282B95 /* MapKit.framework */,
 				AFE05B45160784B700553B26 /* UIKit.framework */,
 				AFE05B47160784B700553B26 /* Foundation.framework */,
 				AFE05B49160784B700553B26 /* CoreGraphics.framework */,
