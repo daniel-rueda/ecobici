@@ -39,7 +39,7 @@ static NSString *stationURL = @"/callwebservice/StationBussinesStatus.php";
 }
 
 - (void)requestStationsWithSuccess:(void (^)(NSArray *stations))success
-                            failure:(void (^)(NSError *error))failure
+                           failure:(void (^)(NSError *error))failure
 {
     if (!stations) {
         stations = [NSMutableArray array];
@@ -49,19 +49,11 @@ static NSString *stationURL = @"/callwebservice/StationBussinesStatus.php";
          parameters:nil
             success:^(AFHTTPRequestOperation *operation, id responseObject) {
                 NSString *response = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-                
-                NSArray *coordinates = [[DRHelper sharedHelper] fetchGeopositions:response];
-                NSArray *idStations = [[DRHelper sharedHelper] fetchStations:response];
-                
-                NSUInteger count = [coordinates count];
-                
-                for (int i = 0; i < count; i++) {
-                    NSDictionary *coordinate = [coordinates objectAtIndex:i];
-                    NSDictionary *info = [idStations objectAtIndex:i];
-                    
+                NSArray *stationsDictionary = [[DRHelper sharedHelper] fetchStations:response];
+                for (NSDictionary *info in stationsDictionary) {
                     DRStation *station = [[DRStation alloc] init];
-                    station.latitude = [coordinate objectForKey:@"lat"];
-                    station.longitude = [coordinate objectForKey:@"long"];
+                    station.latitude = [info objectForKey:@"lat"];
+                    station.longitude = [info objectForKey:@"long"];
                     station.identifier = [info objectForKey:@"identifier"];
                     station.addressNew = [info objectForKey:@"address"];
                     [stations addObject:station];

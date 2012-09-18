@@ -8,6 +8,11 @@
 
 #import "DRHelper.h"
 
+@interface DRHelper ()
+- (NSArray *)fetchGeopositions:(NSString *)body;
+- (NSArray *)fetchIDStations:(NSString *)body;
+@end
+
 @implementation DRHelper
 
 static NSString *regexLocation = @"point = new GLatLng\\((.*?)\\,(.*?)\\)";
@@ -57,7 +62,7 @@ static NSString *regexIDStation = @"idStation=\"\\+(.*)\\+\"&addressnew=(.*)\"\\
     return [geopositions copy];
 }
 
-- (NSArray *)fetchStations:(NSString *)body
+- (NSArray *)fetchIDStations:(NSString *)body
 {
     NSMutableArray *stations = nil;
     NSError *error = nil;
@@ -84,6 +89,28 @@ static NSString *regexIDStation = @"idStation=\"\\+(.*)\\+\"&addressnew=(.*)\"\\
                                   }
                               }];
     }
+    return [stations copy];
+}
+
+- (NSArray *)fetchStations:(NSString *)body
+{
+    NSMutableArray *stations = [NSMutableArray array];
+    
+    NSArray *coordinates = [self fetchGeopositions:body];
+    NSArray *idStations = [self fetchIDStations:body];
+    
+    NSUInteger count = [coordinates count];
+    for (int i = 0; i < count; i++) {
+        NSDictionary *coordinate = [coordinates objectAtIndex:i];
+        NSDictionary *info = [idStations objectAtIndex:i];
+        
+        NSArray *keys = [NSArray arrayWithObjects:@"lat", @"long", @"identifier", @"address", nil];
+        NSArray *objects = [NSArray arrayWithObjects:[coordinate objectForKey:@"lat"], [coordinate objectForKey:@"long"], [info objectForKey:@"identifier"], [info objectForKey:@"address"], nil];
+        
+        NSDictionary *station = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+        [stations addObject:station];
+    }
+
     return [stations copy];
 }
 

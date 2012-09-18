@@ -12,7 +12,6 @@
 
 + (DRHelper *)sharedHelper;
 
-- (NSArray *)fetchGeopositions:(NSString *)body;
 - (NSArray *)fetchStations:(NSString *)body;
 
 @end
