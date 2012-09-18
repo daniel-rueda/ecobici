@@ -74,21 +74,29 @@
 }
 
 #pragma mark - MKMapViewDelegate
-- (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation
+- (MKAnnotationView *)mapView:(MKMapView *)theMapView
+            viewForAnnotation:(id <MKAnnotation>)annotation
 {
     if ([annotation isKindOfClass:[MKUserLocation class]])
         return nil;
     
-    static NSString* stationPinIdentifier = @"stationPinIdentifier";
+    static NSString *stationPinIdentifier = @"stationPinIdentifier";
     MKPinAnnotationView *pinView = (MKPinAnnotationView *) [theMapView dequeueReusableAnnotationViewWithIdentifier:stationPinIdentifier];
     if (!pinView) {
         pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:stationPinIdentifier];
         [pinView setCanShowCallout:YES];
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        [pinView setRightCalloutAccessoryView:button];
     }else{
         pinView.annotation = annotation;
     }
     
     return pinView;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    NSLog(@"Anottation %@", view.annotation);
 }
 
 @end

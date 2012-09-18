@@ -56,6 +56,7 @@ static NSString *stationURL = @"/callwebservice/StationBussinesStatus.php";
                     station.longitude = [info objectForKey:@"long"];
                     station.identifier = [info objectForKey:@"identifier"];
                     station.addressNew = [info objectForKey:@"address"];
+                    [self updateStation:station];
                     [stations addObject:station];
                 }
                 success([self allStations]);
@@ -63,6 +64,17 @@ static NSString *stationURL = @"/callwebservice/StationBussinesStatus.php";
                 failure(error);
             }
      ];
+}
+
+- (void)updateStation:(DRStation *)station
+{
+    AFHTTPClient *client = [AFHTTPClient clientWithBaseURL:[NSURL URLWithString:baseURL]];
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:station.identifier, @"idStation", station.addressNew, @"addressnew", nil];
+    [client postPath:stationURL parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"%@", [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+    }];
 }
 
 - (NSArray *)allStations
