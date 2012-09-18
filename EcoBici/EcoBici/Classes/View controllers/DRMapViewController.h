@@ -2,7 +2,7 @@
 //  DRMapViewController.h
 //  EcoBici
 //
-//  Created by Planet Media on 9/18/12.
+//  Created by Daniel Rueda Jimenez on 9/18/12.
 //  Copyright (c) 2012 Xtr3m0. All rights reserved.
 //
 

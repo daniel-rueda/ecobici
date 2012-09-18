@@ -37,7 +37,7 @@
 
 - (NSString *)title
 {
-    return [self.name capitalizedString];
+    return [self.identifier capitalizedString];
 }
 
 - (NSString *)subtitle

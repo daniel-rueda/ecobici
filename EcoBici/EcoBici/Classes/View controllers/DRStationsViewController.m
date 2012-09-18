@@ -2,7 +2,7 @@
 //  DRStationsViewController.m
 //  EcoBici
 //
-//  Created by Planet Media on 9/18/12.
+//  Created by Daniel Rueda Jimenez on 9/18/12.
 //  Copyright (c) 2012 Xtr3m0. All rights reserved.
 //
 
@@ -25,10 +25,16 @@
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             _stations = stations;
             [[self tableView] reloadData];
+            [[self mapView] addAnnotations:_stations];
         }];
     } failure:^(NSError *error) {
         NSLog(@"Error durante el error %@", [error localizedDescription]);
     }];
+}
+
+- (void)viewDidUnload {
+    [self setMapView:nil];
+    [super viewDidUnload];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,10 +43,7 @@
 }
 
 #pragma mark - Helpers methods
-- (void)updateMapAnnotations
-{
-    
-}
+
 
 #pragma mark - Table view data source
 
@@ -62,15 +65,30 @@
     return cell;
 }
 
-#pragma mark - Table view delegate
+#pragma mark - Delegates
+#pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-- (void)viewDidUnload {
-    [self setMapView:nil];
-    [super viewDidUnload];
+#pragma mark - MKMapViewDelegate
+- (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    if ([annotation isKindOfClass:[MKUserLocation class]])
+        return nil;
+    
+    static NSString* stationPinIdentifier = @"stationPinIdentifier";
+    MKPinAnnotationView *pinView = (MKPinAnnotationView *) [theMapView dequeueReusableAnnotationViewWithIdentifier:stationPinIdentifier];
+    if (!pinView) {
+        pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:stationPinIdentifier];
+        [pinView setCanShowCallout:YES];
+    }else{
+        pinView.annotation = annotation;
+    }
+    
+    return pinView;
 }
+
 @end
