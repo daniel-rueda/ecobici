@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF11CC5D1608CCBC00F8B5C2 /* DRStationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11CC5C1608CCBC00F8B5C2 /* DRStationsViewController.m */; };
+		AF11CC611608CCCE00F8B5C2 /* DRStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11CC601608CCCE00F8B5C2 /* DRStationViewController.m */; };
+		AF11CC641608CCEE00F8B5C2 /* DRMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11CC631608CCEE00F8B5C2 /* DRMapViewController.m */; };
 		AF54DF731607C67400536F1C /* DRHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AF54DF721607C67400536F1C /* DRHelper.m */; };
 		AF54DF761607C6AE00536F1C /* DRStation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF54DF751607C6AE00536F1C /* DRStation.m */; };
 		AF54DF8B1607C8AB00536F1C /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF54DF791607C8AB00536F1C /* AFHTTPClient.m */; };
@@ -33,6 +36,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF11CC5B1608CCBC00F8B5C2 /* DRStationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRStationsViewController.h; sourceTree = "<group>"; };
+		AF11CC5C1608CCBC00F8B5C2 /* DRStationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRStationsViewController.m; sourceTree = "<group>"; };
+		AF11CC5F1608CCCE00F8B5C2 /* DRStationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRStationViewController.h; sourceTree = "<group>"; };
+		AF11CC601608CCCE00F8B5C2 /* DRStationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRStationViewController.m; sourceTree = "<group>"; };
+		AF11CC621608CCEE00F8B5C2 /* DRMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRMapViewController.h; sourceTree = "<group>"; };
+		AF11CC631608CCEE00F8B5C2 /* DRMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRMapViewController.m; sourceTree = "<group>"; };
 		AF54DF711607C67400536F1C /* DRHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHelper.h; sourceTree = "<group>"; };
 		AF54DF721607C67400536F1C /* DRHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHelper.m; sourceTree = "<group>"; };
 		AF54DF741607C6AE00536F1C /* DRStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRStation.h; sourceTree = "<group>"; };
@@ -205,6 +214,12 @@
 		AFE05B7616079A4F00553B26 /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AF11CC5B1608CCBC00F8B5C2 /* DRStationsViewController.h */,
+				AF11CC5C1608CCBC00F8B5C2 /* DRStationsViewController.m */,
+				AF11CC5F1608CCCE00F8B5C2 /* DRStationViewController.h */,
+				AF11CC601608CCCE00F8B5C2 /* DRStationViewController.m */,
+				AF11CC621608CCEE00F8B5C2 /* DRMapViewController.h */,
+				AF11CC631608CCEE00F8B5C2 /* DRMapViewController.m */,
 			);
 			path = "View controllers";
 			sourceTree = "<group>";
@@ -290,6 +305,9 @@
 				AF54DF911607C8AB00536F1C /* AFURLConnectionOperation.m in Sources */,
 				AF54DF921607C8AB00536F1C /* AFXMLRequestOperation.m in Sources */,
 				AF54DF931607C8AB00536F1C /* UIImageView+AFNetworking.m in Sources */,
+				AF11CC5D1608CCBC00F8B5C2 /* DRStationsViewController.m in Sources */,
+				AF11CC611608CCCE00F8B5C2 /* DRStationViewController.m in Sources */,
+				AF11CC641608CCEE00F8B5C2 /* DRMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

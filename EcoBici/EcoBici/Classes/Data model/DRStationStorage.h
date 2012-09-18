@@ -14,5 +14,6 @@
 
 - (void)requestStationsWithSuccess:(void (^)(NSArray *stations))success
                            failure:(void (^)(NSError *error))failure;
+- (NSArray *)allStations;
 
 @end
