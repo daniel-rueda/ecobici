@@ -27,20 +27,19 @@
             [[self tableView] reloadData];
         }];
     } failure:^(NSError *error) {
-        
+        NSLog(@"Error durante el error %@", [error localizedDescription]);
     }];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    _stations = [[DRStationStorage sharedStorage] allStations];
-    [[self tableView] reloadData];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - Helpers methods
+- (void)updateMapAnnotations
+{
+    
 }
 
 #pragma mark - Table view data source

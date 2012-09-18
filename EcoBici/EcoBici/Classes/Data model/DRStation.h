@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
-@interface DRStation : NSObject
+@interface DRStation : NSObject<MKAnnotation>
 
 @property (nonatomic, copy) NSString *identifier;
 @property (nonatomic, copy) NSString *addressNew;
@@ -18,5 +19,7 @@
 @property (nonatomic, copy) NSString *slots;
 @property (nonatomic, copy) NSString *bikes;
 @property (nonatomic, copy) NSString *distance;
+
+@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 
 @end

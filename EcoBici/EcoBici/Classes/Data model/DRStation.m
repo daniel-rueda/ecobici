@@ -19,10 +19,30 @@
 @synthesize bikes = _bikes;
 @synthesize distance = _distance;
 
+@synthesize coordinate = _coordinate;
+
 - (NSString *)description
 {
     NSString *info = [NSString stringWithFormat:@"ID: %@, Lat: %@, Long: %@", self.identifier, self.latitude, self.longitude];
     return info;
+}
+
+#pragma mark - Protocols
+#pragma mark MKAnnotation
+- (CLLocationCoordinate2D)coordinate
+{
+    CLLocationCoordinate2D location = CLLocationCoordinate2DMake([_latitude floatValue], [_longitude floatValue]);
+    return location;
+}
+
+- (NSString *)title
+{
+    return [self.name capitalizedString];
+}
+
+- (NSString *)subtitle
+{
+    return [NSString stringWithFormat:@"Bikes: %@ | Slots: %@", self.bikes, self.slots];
 }
 
 @end

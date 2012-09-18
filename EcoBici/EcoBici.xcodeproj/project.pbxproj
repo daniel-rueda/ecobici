@@ -10,6 +10,7 @@
 		AF11CC5D1608CCBC00F8B5C2 /* DRStationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11CC5C1608CCBC00F8B5C2 /* DRStationsViewController.m */; };
 		AF11CC611608CCCE00F8B5C2 /* DRStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11CC601608CCCE00F8B5C2 /* DRStationViewController.m */; };
 		AF11CC641608CCEE00F8B5C2 /* DRMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11CC631608CCEE00F8B5C2 /* DRMapViewController.m */; };
+		AF11CC661608D33900F8B5C2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF11CC651608D33900F8B5C2 /* CoreLocation.framework */; };
 		AF54DF731607C67400536F1C /* DRHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AF54DF721607C67400536F1C /* DRHelper.m */; };
 		AF54DF761607C6AE00536F1C /* DRStation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF54DF751607C6AE00536F1C /* DRStation.m */; };
 		AF54DF8B1607C8AB00536F1C /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF54DF791607C8AB00536F1C /* AFHTTPClient.m */; };
@@ -42,6 +43,7 @@
 		AF11CC601608CCCE00F8B5C2 /* DRStationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRStationViewController.m; sourceTree = "<group>"; };
 		AF11CC621608CCEE00F8B5C2 /* DRMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRMapViewController.h; sourceTree = "<group>"; };
 		AF11CC631608CCEE00F8B5C2 /* DRMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRMapViewController.m; sourceTree = "<group>"; };
+		AF11CC651608D33900F8B5C2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		AF54DF711607C67400536F1C /* DRHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHelper.h; sourceTree = "<group>"; };
 		AF54DF721607C67400536F1C /* DRHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHelper.m; sourceTree = "<group>"; };
 		AF54DF741607C6AE00536F1C /* DRStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRStation.h; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF11CC661608D33900F8B5C2 /* CoreLocation.framework in Frameworks */,
 				AFF3DBAB1607EA7E00282B95 /* MapKit.framework in Frameworks */,
 				AFE05B46160784B700553B26 /* UIKit.framework in Frameworks */,
 				AFE05B48160784B700553B26 /* Foundation.framework in Frameworks */,
@@ -147,6 +150,7 @@
 		AFE05B44160784B700553B26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF11CC651608D33900F8B5C2 /* CoreLocation.framework */,
 				AFF3DBAA1607EA7E00282B95 /* MapKit.framework */,
 				AFE05B45160784B700553B26 /* UIKit.framework */,
 				AFE05B47160784B700553B26 /* Foundation.framework */,
