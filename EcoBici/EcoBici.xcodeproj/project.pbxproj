@@ -11,6 +11,9 @@
 		AF11CC611608CCCE00F8B5C2 /* DRStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11CC601608CCCE00F8B5C2 /* DRStationViewController.m */; };
 		AF11CC641608CCEE00F8B5C2 /* DRMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11CC631608CCEE00F8B5C2 /* DRMapViewController.m */; };
 		AF11CC661608D33900F8B5C2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF11CC651608D33900F8B5C2 /* CoreLocation.framework */; };
+		AF11CC6A1608E9B900F8B5C2 /* SMXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11CC691608E9B900F8B5C2 /* SMXMLDocument.m */; };
+		AF11CC6D1608F0BF00F8B5C2 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11CC6C1608F0BF00F8B5C2 /* NSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AF11CC721608F20200F8B5C2 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11CC711608F20200F8B5C2 /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AF54DF731607C67400536F1C /* DRHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AF54DF721607C67400536F1C /* DRHelper.m */; };
 		AF54DF761607C6AE00536F1C /* DRStation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF54DF751607C6AE00536F1C /* DRStation.m */; };
 		AF54DF8B1607C8AB00536F1C /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF54DF791607C8AB00536F1C /* AFHTTPClient.m */; };
@@ -44,6 +47,12 @@
 		AF11CC621608CCEE00F8B5C2 /* DRMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRMapViewController.h; sourceTree = "<group>"; };
 		AF11CC631608CCEE00F8B5C2 /* DRMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRMapViewController.m; sourceTree = "<group>"; };
 		AF11CC651608D33900F8B5C2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AF11CC681608E9B900F8B5C2 /* SMXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMXMLDocument.h; path = ../xmldocument/SMXMLDocument.h; sourceTree = "<group>"; };
+		AF11CC691608E9B900F8B5C2 /* SMXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMXMLDocument.m; path = ../xmldocument/SMXMLDocument.m; sourceTree = "<group>"; };
+		AF11CC6B1608F0BF00F8B5C2 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		AF11CC6C1608F0BF00F8B5C2 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		AF11CC6E1608F1C300F8B5C2 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		AF11CC711608F20200F8B5C2 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
 		AF54DF711607C67400536F1C /* DRHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHelper.h; sourceTree = "<group>"; };
 		AF54DF721607C67400536F1C /* DRHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHelper.m; sourceTree = "<group>"; };
 		AF54DF741607C6AE00536F1C /* DRStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRStation.h; sourceTree = "<group>"; };
@@ -102,6 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF11CC671608E9A800F8B5C2 /* xmldocument */ = {
+			isa = PBXGroup;
+			children = (
+				AF11CC681608E9B900F8B5C2 /* SMXMLDocument.h */,
+				AF11CC691608E9B900F8B5C2 /* SMXMLDocument.m */,
+			);
+			name = xmldocument;
+			sourceTree = "<group>";
+		};
 		AF54DF771607C8AB00536F1C /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +150,7 @@
 		AFE05B36160784B700553B26 = {
 			isa = PBXGroup;
 			children = (
+				AF11CC671608E9A800F8B5C2 /* xmldocument */,
 				AF54DF771607C8AB00536F1C /* AFNetworking */,
 				AFE05B4B160784B700553B26 /* EcoBici */,
 				AFE05B44160784B700553B26 /* Frameworks */,
@@ -211,6 +230,10 @@
 			children = (
 				AF54DF711607C67400536F1C /* DRHelper.h */,
 				AF54DF721607C67400536F1C /* DRHelper.m */,
+				AF11CC6B1608F0BF00F8B5C2 /* NSString+HTML.h */,
+				AF11CC6C1608F0BF00F8B5C2 /* NSString+HTML.m */,
+				AF11CC6E1608F1C300F8B5C2 /* GTMNSString+HTML.h */,
+				AF11CC711608F20200F8B5C2 /* GTMNSString+HTML.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -312,6 +335,9 @@
 				AF11CC5D1608CCBC00F8B5C2 /* DRStationsViewController.m in Sources */,
 				AF11CC611608CCCE00F8B5C2 /* DRStationViewController.m in Sources */,
 				AF11CC641608CCEE00F8B5C2 /* DRMapViewController.m in Sources */,
+				AF11CC6A1608E9B900F8B5C2 /* SMXMLDocument.m in Sources */,
+				AF11CC6D1608F0BF00F8B5C2 /* NSString+HTML.m in Sources */,
+				AF11CC721608F20200F8B5C2 /* GTMNSString+HTML.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

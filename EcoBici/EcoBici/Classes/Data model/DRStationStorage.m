@@ -10,6 +10,8 @@
 #import "DRHelper.h"
 #import "AFHTTPClient.h"
 #import "DRStation.h"
+#import "SMXMLDocument.h"
+#import "NSString+HTML.h"
 
 @interface DRStationStorage ()
 {
@@ -58,6 +60,7 @@ static NSString *stationURL = @"/callwebservice/StationBussinesStatus.php";
                     station.addressNew = [info objectForKey:@"address"];
                     [self updateStation:station];
                     [stations addObject:station];
+                    break;
                 }
                 success([self allStations]);
             }failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -71,7 +74,23 @@ static NSString *stationURL = @"/callwebservice/StationBussinesStatus.php";
     AFHTTPClient *client = [AFHTTPClient clientWithBaseURL:[NSURL URLWithString:baseURL]];
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:station.identifier, @"idStation", station.addressNew, @"addressnew", nil];
     [client postPath:stationURL parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"%@", [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
+        NSMutableString *body = [[NSMutableString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        [body insertString:@"<body>" atIndex:0];
+        [body appendString:@"</body>"];
+        [body replaceOccurrencesOfString:@"<br>" withString:@"" options:0 range:NSMakeRange(0, [body length])];
+        NSError *error = nil;
+        SMXMLDocument *document = [SMXMLDocument documentWithData:[[body stringByDecodingHTMLEntities] dataUsingEncoding:NSUTF8StringEncoding] error:&error];
+        if (error) {
+            NSLog(@"Something happened %@", [error localizedDescription]);
+        }else{
+            SMXMLElement *innerDiv = [document.root childNamed:@"div"];
+            NSArray *children = innerDiv.children;
+            if (children.count > 1) {
+                NSString *name = [[innerDiv firstChild] value];
+                NSString *stats = [[innerDiv lastChild] value];
+                station.name = name;
+            }
+        }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
     }];
