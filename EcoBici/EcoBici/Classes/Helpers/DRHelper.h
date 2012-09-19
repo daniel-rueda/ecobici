@@ -13,5 +13,6 @@
 + (DRHelper *)sharedHelper;
 
 - (NSArray *)fetchStations:(NSString *)body;
+- (NSArray *)fetchStats:(NSString *)body;
 
 @end

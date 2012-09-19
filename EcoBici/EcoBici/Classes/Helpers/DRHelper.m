@@ -11,12 +11,14 @@
 @interface DRHelper ()
 - (NSArray *)fetchGeopositions:(NSString *)body;
 - (NSArray *)fetchIDStations:(NSString *)body;
+- (NSArray *)fetchStats:(NSString *)info;
 @end
 
 @implementation DRHelper
 
 static NSString *regexLocation = @"point = new GLatLng\\((.*?)\\,(.*?)\\)";
 static NSString *regexIDStation = @"idStation=\"\\+(.*)\\+\"&addressnew=(.*)\"\\+\"&s_id_idioma";
+static NSString *regexStats = @".*?(\\d+).*?(\\d+).*?(\\d+)";
 
 + (DRHelper *)sharedHelper
 {
@@ -112,6 +114,18 @@ static NSString *regexIDStation = @"idStation=\"\\+(.*)\\+\"&addressnew=(.*)\"\\
     }
 
     return [stations copy];
+}
+
+- (NSArray *)fetchStats:(NSString *)body
+{
+    NSString *tmp = [body stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSArray *items = [tmp componentsSeparatedByString:@":"];
+    if (items.count > 2) {
+        NSArray *stats = [NSArray arrayWithObjects:[items objectAtIndex:1], [items objectAtIndex:2], nil];
+        NSLog(@"Stats %@", stats);
+        return stats;
+    }
+    return nil;
 }
 
 @end

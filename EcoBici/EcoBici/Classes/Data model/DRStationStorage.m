@@ -60,7 +60,6 @@ static NSString *stationURL = @"/callwebservice/StationBussinesStatus.php";
                     station.addressNew = [info objectForKey:@"address"];
                     [self updateStation:station];
                     [stations addObject:station];
-                    break;
                 }
                 success([self allStations]);
             }failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -88,6 +87,7 @@ static NSString *stationURL = @"/callwebservice/StationBussinesStatus.php";
             if (children.count > 1) {
                 NSString *name = [[innerDiv firstChild] value];
                 NSString *stats = [[innerDiv lastChild] value];
+                [[DRHelper sharedHelper] fetchStats:stats];
                 station.name = name;
             }
         }
