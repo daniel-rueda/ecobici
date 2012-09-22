@@ -4,3 +4,6 @@
 [submodule "xmldocument"]
 	path = xmldocument
 	url = https://github.com/nfarina/xmldocument.git
+[submodule "SVProgressHUD"]
+	path = SVProgressHUD
+	url = git://github.com/samvermette/SVProgressHUD.git
