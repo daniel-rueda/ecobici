@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@class DRStation;
+
+typedef enum _rowsValues
+{
+    kNameStation,
+    kSlotsStation,
+    kBikesStation,
+    kDistanceStation,
+    kNumberOfRows
+}rowsValues;
+
 @interface DRStationViewController : UITableViewController
+
+@property (nonatomic, strong) DRStation *station;
 
 @end

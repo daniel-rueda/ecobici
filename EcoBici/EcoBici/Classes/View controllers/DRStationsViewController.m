@@ -7,6 +7,7 @@
 //
 
 #import "DRStationsViewController.h"
+#import "DRStationViewController.h"
 #import "DRStationStorage.h"
 #import "DRStation.h"
 
@@ -43,7 +44,16 @@
 }
 
 #pragma mark - Helpers methods
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([sender isKindOfClass:[UITableViewCell class]]) {
+        if ([segue.identifier isEqualToString:@"showDetailSegue"]) {
+            DRStationViewController *stationView = (DRStationViewController *)sender;
+            NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+            stationView.station = [_stations objectAtIndex:indexPath.row];
+        }
+    }
+}
 
 #pragma mark - Table view data source
 

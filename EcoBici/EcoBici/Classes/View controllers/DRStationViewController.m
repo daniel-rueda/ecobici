@@ -7,12 +7,14 @@
 //
 
 #import "DRStationViewController.h"
+#import "DRStation.h"
 
 @interface DRStationViewController ()
 
 @end
 
 @implementation DRStationViewController
+@synthesize station = _station;
 
 - (void)viewDidLoad
 {
@@ -30,7 +32,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;
+    return kNumberOfRows;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -38,7 +40,31 @@
     static NSString *CellIdentifier = @"stationCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    NSString *title = nil;
+    NSString *subtitle = nil;
+    switch (indexPath.row) {
+        case kNameStation:
+            title = @"Estación";
+            subtitle = _station.name;
+            break;
+        kSlotsStation:
+            title = @"Espacios Disponibles";
+            subtitle = _station.slots;
+            break;
+        kBikesStation:
+            title = @"Bicicletas Disponibles";
+            subtitle = _station.bikes;
+            break;
+        kDistanceStation:
+            title = @"Distancia";
+            subtitle = @"";
+            break;
+        default:
+            break;
+    }
+    
+    cell.textLabel.text = title;
+    cell.detailTextLabel.text = subtitle;
     
     return cell;
 }

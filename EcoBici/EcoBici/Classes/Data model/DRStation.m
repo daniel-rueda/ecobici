@@ -45,4 +45,11 @@
     return [NSString stringWithFormat:@"Bikes: %@ | Slots: %@", self.bikes, self.slots];
 }
 
+#pragma mark - Helpers
+- (CLLocationDistance)distanceFromLocation:(CLLocation *)location
+{
+    CLLocation *stationLocation = [[CLLocation alloc] initWithLatitude:_coordinate.latitude longitude:_coordinate.longitude];
+    return [stationLocation distanceFromLocation:location];
+}
+
 @end
