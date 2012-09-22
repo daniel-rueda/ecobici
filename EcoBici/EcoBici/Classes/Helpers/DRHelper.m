@@ -122,7 +122,6 @@ static NSString *regexStats = @".*?(\\d+).*?(\\d+).*?(\\d+)";
     NSArray *items = [tmp componentsSeparatedByString:@":"];
     if (items.count > 2) {
         NSArray *stats = [NSArray arrayWithObjects:[items objectAtIndex:1], [items objectAtIndex:2], nil];
-        NSLog(@"Stats %@", stats);
         return stats;
     }
     return nil;

@@ -48,7 +48,7 @@
 {
     if ([sender isKindOfClass:[UITableViewCell class]]) {
         if ([segue.identifier isEqualToString:@"showDetailSegue"]) {
-            DRStationViewController *stationView = (DRStationViewController *)sender;
+            DRStationViewController *stationView = (DRStationViewController *)segue.destinationViewController;
             NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
             stationView.station = [_stations objectAtIndex:indexPath.row];
         }

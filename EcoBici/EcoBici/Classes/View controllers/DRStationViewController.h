@@ -12,7 +12,7 @@
 
 typedef enum _rowsValues
 {
-    kNameStation,
+    kNameStation = 0,
     kSlotsStation,
     kBikesStation,
     kDistanceStation,

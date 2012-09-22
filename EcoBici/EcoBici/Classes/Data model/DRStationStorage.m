@@ -87,12 +87,14 @@ static NSString *stationURL = @"/callwebservice/StationBussinesStatus.php";
             if (children.count > 1) {
                 NSString *name = [[innerDiv firstChild] value];
                 NSString *stats = [[innerDiv lastChild] value];
-                [[DRHelper sharedHelper] fetchStats:stats];
+                NSArray *arrayStats = [[DRHelper sharedHelper] fetchStats:stats];
                 station.name = name;
+                station.slots = [arrayStats objectAtIndex:0];
+                station.bikes = [arrayStats objectAtIndex:1];
             }
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
+        NSLog(@"Error %@", error);
     }];
 }
 

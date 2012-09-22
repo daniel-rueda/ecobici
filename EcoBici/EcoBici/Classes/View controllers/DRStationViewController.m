@@ -47,15 +47,15 @@
             title = @"Estación";
             subtitle = _station.name;
             break;
-        kSlotsStation:
+        case kSlotsStation:
             title = @"Espacios Disponibles";
             subtitle = _station.slots;
             break;
-        kBikesStation:
+        case kBikesStation:
             title = @"Bicicletas Disponibles";
             subtitle = _station.bikes;
             break;
-        kDistanceStation:
+        case kDistanceStation:
             title = @"Distancia";
             subtitle = @"";
             break;
