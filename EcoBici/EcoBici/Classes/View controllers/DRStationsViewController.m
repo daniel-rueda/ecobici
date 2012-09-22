@@ -29,7 +29,7 @@
             [[self mapView] addAnnotations:_stations];
         }];
     } failure:^(NSError *error) {
-        NSLog(@"Error durante el error %@", [error localizedDescription]);
+        NSLog(@"Error durante la carga %@", [error localizedDescription]);
     }];
 }
 
