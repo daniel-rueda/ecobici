@@ -123,6 +123,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Estación" id="UlR-dS-Emb"/>
+                    <connections>
+                        <outlet property="mapView" destination="7ec-zt-KPe" id="1qI-vN-ZKo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qRb-Lg-JQu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,11 +176,14 @@
         <class className="DRMapViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DRMapViewController.h"/>
         </class>
-        <class className="DRStationViewController" superclassName="UITableViewController">
+        <class className="DRStationViewController" superclassName="DRTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DRStationViewController.h"/>
         </class>
-        <class className="DRStationsViewController" superclassName="UITableViewController">
+        <class className="DRStationsViewController" superclassName="DRTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DRStationsViewController.h"/>
+        </class>
+        <class className="DRTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DRTableViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
             </relationships>
