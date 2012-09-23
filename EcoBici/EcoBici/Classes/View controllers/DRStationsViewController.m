@@ -11,6 +11,8 @@
 #import "DRStationStorage.h"
 #import "DRStation.h"
 
+#import "SVProgressHUD.h"
+
 @interface DRStationsViewController ()
 {
     NSArray *_stations;
@@ -22,14 +24,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [SVProgressHUD showWithStatus:@"Obteniendo información"];
     [[DRStationStorage sharedStorage] requestStationsWithSuccess:^(NSArray *stations) {
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             _stations = stations;
             [[self tableView] reloadData];
             [[self mapView] addAnnotations:_stations];
+            [SVProgressHUD showSuccessWithStatus:@"Datos obtenidos"];
         }];
     } failure:^(NSError *error) {
-        NSLog(@"Error durante la carga %@", [error localizedDescription]);
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [SVProgressHUD showErrorWithStatus:@"Error obteniendo datos"];
+        }];
     }];
 }
 

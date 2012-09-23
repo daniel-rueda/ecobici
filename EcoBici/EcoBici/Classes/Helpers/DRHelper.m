@@ -34,6 +34,8 @@ static NSString *regexStats = @".*?(\\d+).*?(\\d+).*?(\\d+)";
     return [self sharedHelper];
 }
 
+#pragma mark - Scrapping stuffs
+#pragma mark Private methods
 - (NSArray *)fetchGeopositions:(NSString *)body
 {
     NSMutableArray *geopositions = nil;
@@ -94,6 +96,7 @@ static NSString *regexStats = @".*?(\\d+).*?(\\d+).*?(\\d+)";
     return [stations copy];
 }
 
+#pragma mark Public methods
 - (NSArray *)fetchStations:(NSString *)body
 {
     NSMutableArray *stations = [NSMutableArray array];

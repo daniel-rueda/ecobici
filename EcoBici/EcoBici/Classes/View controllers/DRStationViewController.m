@@ -57,7 +57,7 @@
             break;
         case kDistanceStation:
             title = @"Distancia";
-            subtitle = @"";
+            subtitle = _station.distanceCalculated;
             break;
         default:
             break;

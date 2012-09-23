@@ -17,7 +17,7 @@
 @synthesize longitude = _longitude;
 @synthesize slots = _slots;
 @synthesize bikes = _bikes;
-@synthesize distance = _distance;
+@synthesize distanceCalculated = _distanceCalculated;
 
 @synthesize coordinate = _coordinate;
 

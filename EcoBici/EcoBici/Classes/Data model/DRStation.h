@@ -18,7 +18,7 @@
 @property (nonatomic, copy) NSString *longitude;
 @property (nonatomic, copy) NSString *slots;
 @property (nonatomic, copy) NSString *bikes;
-@property (nonatomic, copy) NSString *distance;
+@property (nonatomic, copy) NSString *distanceCalculated;
 
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 
