@@ -13,6 +13,7 @@
 @end
 
 @implementation DRMapViewController
+@synthesize mapView = _mapView;
 
 - (void)viewDidLoad
 {
@@ -22,6 +23,11 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (void)viewDidUnload {
+    [self setMapView:nil];
+    [super viewDidUnload];
 }
 
 @end

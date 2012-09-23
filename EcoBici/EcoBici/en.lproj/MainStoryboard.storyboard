@@ -150,6 +150,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Mapa" id="xlj-ip-HhN"/>
+                    <connections>
+                        <outlet property="mapView" destination="yaS-qt-KgS" id="gie-5i-uRg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGj-eF-YZV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,6 +178,9 @@
     <classes>
         <class className="DRMapViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DRMapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
         </class>
         <class className="DRStationViewController" superclassName="DRTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DRStationViewController.h"/>
