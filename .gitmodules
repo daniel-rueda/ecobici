@@ -7,3 +7,6 @@
 [submodule "SVProgressHUD"]
 	path = SVProgressHUD
 	url = git://github.com/samvermette/SVProgressHUD.git
+[submodule "RestKit"]
+	path = RestKit
+	url = git://github.com/RestKit/RestKit.git

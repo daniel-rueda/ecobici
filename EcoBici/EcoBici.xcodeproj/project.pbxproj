@@ -10,6 +10,7 @@
 		4B1EEA61160E1FF5006B18EF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1EEA60160E1FF5006B18EF /* QuartzCore.framework */; };
 		4B1EEA67160E2007006B18EF /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4B1EEA64160E2007006B18EF /* SVProgressHUD.bundle */; };
 		4B1EEA68160E2007006B18EF /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1EEA66160E2007006B18EF /* SVProgressHUD.m */; };
+		4B2948B9160EA2BA00A657AA /* DRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2948B8160EA2BA00A657AA /* DRTableViewController.m */; };
 		AF11CC5D1608CCBC00F8B5C2 /* DRStationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11CC5C1608CCBC00F8B5C2 /* DRStationsViewController.m */; };
 		AF11CC611608CCCE00F8B5C2 /* DRStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11CC601608CCCE00F8B5C2 /* DRStationViewController.m */; };
 		AF11CC641608CCEE00F8B5C2 /* DRMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11CC631608CCEE00F8B5C2 /* DRMapViewController.m */; };
@@ -47,6 +48,8 @@
 		4B1EEA64160E2007006B18EF /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		4B1EEA65160E2007006B18EF /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		4B1EEA66160E2007006B18EF /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		4B2948B7160EA2BA00A657AA /* DRTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRTableViewController.h; sourceTree = "<group>"; };
+		4B2948B8160EA2BA00A657AA /* DRTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRTableViewController.m; sourceTree = "<group>"; };
 		AF11CC5B1608CCBC00F8B5C2 /* DRStationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRStationsViewController.h; sourceTree = "<group>"; };
 		AF11CC5C1608CCBC00F8B5C2 /* DRStationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRStationsViewController.m; sourceTree = "<group>"; };
 		AF11CC5F1608CCCE00F8B5C2 /* DRStationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRStationViewController.h; sourceTree = "<group>"; };
@@ -262,6 +265,8 @@
 		AFE05B7616079A4F00553B26 /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4B2948B7160EA2BA00A657AA /* DRTableViewController.h */,
+				4B2948B8160EA2BA00A657AA /* DRTableViewController.m */,
 				AF11CC5B1608CCBC00F8B5C2 /* DRStationsViewController.h */,
 				AF11CC5C1608CCBC00F8B5C2 /* DRStationsViewController.m */,
 				AF11CC5F1608CCCE00F8B5C2 /* DRStationViewController.h */,
@@ -361,6 +366,7 @@
 				AF11CC6D1608F0BF00F8B5C2 /* NSString+HTML.m in Sources */,
 				AF11CC721608F20200F8B5C2 /* GTMNSString+HTML.m in Sources */,
 				4B1EEA68160E2007006B18EF /* SVProgressHUD.m in Sources */,
+				4B2948B9160EA2BA00A657AA /* DRTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -44,11 +44,6 @@
     }];
 }
 
-- (void)viewDidUnload {
-    [self setMapView:nil];
-    [super viewDidUnload];
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -70,7 +65,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
     return [_stations count];
 }
 

@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
+#import "DRTableViewController.h"
 
-@interface DRStationsViewController : UITableViewController
-
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@interface DRStationsViewController : DRTableViewController
 
 @end
