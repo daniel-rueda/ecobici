@@ -20,6 +20,7 @@
 @property (nonatomic, copy) NSString *bikes;
 @property (nonatomic, copy) NSString *distanceCalculated;
 
+@property (nonatomic, strong) UIView *view;
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 
 @end

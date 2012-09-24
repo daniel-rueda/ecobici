@@ -19,6 +19,7 @@
 @synthesize bikes = _bikes;
 @synthesize distanceCalculated = _distanceCalculated;
 
+@synthesize view = _view;
 @synthesize coordinate = _coordinate;
 
 - (NSString *)description
