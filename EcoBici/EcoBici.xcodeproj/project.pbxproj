@@ -14,6 +14,7 @@
 		4B6983FC160FDBCD00E0D523 /* ARView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6983FB160FDBCD00E0D523 /* ARView.m */; };
 		4B698407160FDCE800E0D523 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B698406160FDCE800E0D523 /* CoreMotion.framework */; };
 		4B69840E160FDD5600E0D523 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B69840D160FDD5600E0D523 /* AVFoundation.framework */; };
+		4B698411160FDE0800E0D523 /* DRARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B698410160FDE0800E0D523 /* DRARViewController.m */; };
 		AF11CC5D1608CCBC00F8B5C2 /* DRStationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11CC5C1608CCBC00F8B5C2 /* DRStationsViewController.m */; };
 		AF11CC611608CCCE00F8B5C2 /* DRStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11CC601608CCCE00F8B5C2 /* DRStationViewController.m */; };
 		AF11CC641608CCEE00F8B5C2 /* DRMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF11CC631608CCEE00F8B5C2 /* DRMapViewController.m */; };
@@ -57,6 +58,8 @@
 		4B6983FB160FDBCD00E0D523 /* ARView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARView.m; sourceTree = "<group>"; };
 		4B698406160FDCE800E0D523 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		4B69840D160FDD5600E0D523 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4B69840F160FDE0800E0D523 /* DRARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRARViewController.h; sourceTree = "<group>"; };
+		4B698410160FDE0800E0D523 /* DRARViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRARViewController.m; sourceTree = "<group>"; };
 		AF11CC5B1608CCBC00F8B5C2 /* DRStationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRStationsViewController.h; sourceTree = "<group>"; };
 		AF11CC5C1608CCBC00F8B5C2 /* DRStationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRStationsViewController.m; sourceTree = "<group>"; };
 		AF11CC5F1608CCCE00F8B5C2 /* DRStationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRStationViewController.h; sourceTree = "<group>"; };
@@ -290,6 +293,8 @@
 				4B2948B8160EA2BA00A657AA /* DRTableViewController.m */,
 				AF11CC5B1608CCBC00F8B5C2 /* DRStationsViewController.h */,
 				AF11CC5C1608CCBC00F8B5C2 /* DRStationsViewController.m */,
+				4B69840F160FDE0800E0D523 /* DRARViewController.h */,
+				4B698410160FDE0800E0D523 /* DRARViewController.m */,
 				AF11CC5F1608CCCE00F8B5C2 /* DRStationViewController.h */,
 				AF11CC601608CCCE00F8B5C2 /* DRStationViewController.m */,
 				AF11CC621608CCEE00F8B5C2 /* DRMapViewController.h */,
@@ -389,6 +394,7 @@
 				4B1EEA68160E2007006B18EF /* SVProgressHUD.m in Sources */,
 				4B2948B9160EA2BA00A657AA /* DRTableViewController.m in Sources */,
 				4B6983FC160FDBCD00E0D523 /* ARView.m in Sources */,
+				4B698411160FDE0800E0D523 /* DRARViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

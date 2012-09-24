@@ -34,6 +34,7 @@
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             _stations = stations;
             [[self tableView] reloadData];
+            [[self mapView] removeAnnotations:[[self mapView] annotations]];
             [[self mapView] addAnnotations:_stations];
             [SVProgressHUD showSuccessWithStatus:@"Datos obtenidos"];
         }];

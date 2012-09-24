@@ -50,6 +50,7 @@ static NSString *stationURL = @"/callwebservice/StationBussinesStatus.php";
     [client getPath:listURL
          parameters:nil
             success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                [stations removeAllObjects];
                 NSString *response = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
                 NSArray *stationsDictionary = [[DRHelper sharedHelper] fetchStations:response];
                 for (NSDictionary *info in stationsDictionary) {
