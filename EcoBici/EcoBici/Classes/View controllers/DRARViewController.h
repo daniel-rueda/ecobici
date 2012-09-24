@@ -10,4 +10,6 @@
 
 @interface DRARViewController : UIViewController
 
+- (IBAction)dismissPressed:(id)sender;
+
 @end
